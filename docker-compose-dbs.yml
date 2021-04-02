@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  db:
+    image: mongo:4.4-bionic
+    container_name: scoring_db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: scoreapp
+      MONGO_INITDB_ROOT_PASSWORD: scoreapp
+    ports:
+      - 27017:27017
+    volumes:
+      - ./tmp/mongodb:/data/db
