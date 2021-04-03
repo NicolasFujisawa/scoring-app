@@ -11,3 +11,11 @@ services:
       - 27017:27017
     volumes:
       - ./tmp/mongodb:/data/db
+
+  redis:
+    image: redis:6.2.1-alpine
+    container_name: redis_cache
+    ports:
+      - 6379:6379
+    volumes:
+      - ./tmp/redis:/data
