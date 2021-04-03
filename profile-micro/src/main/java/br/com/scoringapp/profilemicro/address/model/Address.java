@@ -1,10 +1,14 @@
 package br.com.scoringapp.profilemicro.address.model;
 
-public class Address {
+import java.io.Serializable;
 
-    Long userId;
+public class Address implements Serializable {
 
-    Integer number;
+    private static final long serialVersionUID = 1331826007886728184L;
+
+    String userId;
+
+    String number;
 
     String route;
 

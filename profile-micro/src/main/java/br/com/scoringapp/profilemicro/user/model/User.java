@@ -1,5 +1,6 @@
 package br.com.scoringapp.profilemicro.user.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import br.com.scoringapp.profilemicro.address.model.Address;
@@ -8,7 +9,9 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 
 @Data
-public class User {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = -2241805334368530969L;
 
     @Id
     private String id;
