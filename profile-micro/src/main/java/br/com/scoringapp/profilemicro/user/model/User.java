@@ -7,8 +7,10 @@ import br.com.scoringapp.profilemicro.address.model.Address;
 import br.com.scoringapp.profilemicro.debts.model.Debts;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
+@Document(collection = "profile")
 public class User implements Serializable {
 
     private static final long serialVersionUID = -2241805334368530969L;
@@ -18,5 +20,5 @@ public class User implements Serializable {
     private String name;
     private String cpf;
     private List<Debts> debts;
-    private Address address;
+    private List<Address> address;
 }
