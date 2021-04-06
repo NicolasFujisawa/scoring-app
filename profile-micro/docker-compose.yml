@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  profile-micro:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: profile-micro-api
+    container_name: profile-micro
+    volumes:
+      - ./build/libs/profile-app-0.0.1-SNAPSHOT.jar:/app/api/profile-app.jar
+    ports:
+      - '8080:8080'
+      - '5005:5005'
+    env_file:
+      - .env
+
+networks:
+  default:
+    external:
+      name: scoring_default

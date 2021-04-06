@@ -1,4 +1,0 @@
-spring:
-  data:
-    mongodb:
-      uri: mongodb://scoreapp:scoreapp@localhost:27017/admin

@@ -1,0 +1,5 @@
+.env*
+Dockerfile
+build
+!build/libs
+*.md

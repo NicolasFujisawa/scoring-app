@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.8"
 
 services:
   db:
@@ -19,3 +19,7 @@ services:
       - 6379:6379
     volumes:
       - ./tmp/redis:/data
+
+networks:
+  default:
+    name: scoring_default
